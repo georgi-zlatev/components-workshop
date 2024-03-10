@@ -17,7 +17,7 @@ return this.http.get<Theme[]>(`${apiUrl}/themes`)
   }
 
   getPosts(limit?: number) { 
-    const {apiUrl} = environment;
+    const { apiUrl } = environment;
     let url = `${apiUrl}/posts`
 
     if (limit) {
