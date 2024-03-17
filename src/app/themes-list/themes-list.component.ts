@@ -17,11 +17,7 @@ export class ThemesListComponent implements OnInit {
     this.api.getThemes().subscribe((themes) => {
       console.log(themes)
       this.themes = themes
-
-      setTimeout(() =>
-    {
       this.isLoading = false;
-    }, 4000)
     }
 
     )
