@@ -11,6 +11,7 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { CurrentThemeComponent } from './theme/current-theme/current-theme.component';
+import { UserModule } from './user/user.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CurrentThemeComponent } from './theme/current-theme/current-theme.compo
     CoreModule,
     SharedModule,
     HttpClientModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
