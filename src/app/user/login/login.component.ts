@@ -7,5 +7,9 @@ import { UserService } from '../user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-constructor(private userService: UserService) {}
+  constructor(private userService: UserService) { }
+
+  login(email: String, password: String) {
+    this.userService.login()
+  }
 }
