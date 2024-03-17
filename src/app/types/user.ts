@@ -16,4 +16,5 @@ export interface UserForAuthentication {
     email: string;
     phoneNumber: string;
     password: string;
+    id: string;
 }

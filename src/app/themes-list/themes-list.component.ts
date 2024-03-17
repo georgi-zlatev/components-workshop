@@ -13,17 +13,28 @@ export class ThemesListComponent implements OnInit {
   isLoading: boolean = true
   constructor(private api: ApiService, private userService: UserService) { }
 
-  get isLoggedIn( ) :boolean {
+  get isLoggedIn(): boolean {
     return this.userService.isLogged;
+  }
+
+  get userId(): string {
+    return this.userService.user?.id || '';
   }
 
   ngOnInit(): void {
     this.api.getThemes().subscribe((themes) => {
-      console.log(themes)
       this.themes = themes
       this.isLoading = false;
     }
 
     )
+  }
+
+  isSubscribed(theme:Theme){
+    const isSubscribedUser = theme.subscribers.find((s) =>{ return s === this.userService.user?.id})
+ 
+    console.log({isSubscribedUser: !!isSubscribedUser});
+    
+    return isSubscribedUser
   }
 }
