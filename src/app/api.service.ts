@@ -16,6 +16,17 @@ const { apiUrl } = environment;
 return this.http.get<Theme[]>(`${apiUrl}/themes`)
   }
 
+  getTheme() {
+    // ToDo - get details for every individual theme
+    const { apiUrl } = environment;
+      }
+
+    createTheme(themeName:string, postText: string){
+      const {apiUrl} = environment
+      const payload = {themeName, postText}
+return this.http.post<Theme>(`${apiUrl}/themes`, payload)
+    }
+
   getPosts(limit?: number) { 
     const { apiUrl } = environment;
     let url = `${apiUrl}/posts`
