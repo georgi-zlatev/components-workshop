@@ -14,7 +14,6 @@ constructor(private api: ApiService) {}
 
 ngOnInit(): void {
   this.api.getPosts().subscribe((posts) => {
-    console.log(posts);
     this.posts = posts
       this.isLoading = false;
   })
