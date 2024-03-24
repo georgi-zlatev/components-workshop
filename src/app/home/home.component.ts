@@ -9,7 +9,7 @@ import { UserService } from '../user/user.service';
 export class HomeComponent {
 constructor(private userService: UserService) {}
 
-get isLoggedIn():boolean {
+get isLoggedIn(): boolean {
   return this.userService.isLogged;
 }
 }
